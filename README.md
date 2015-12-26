@@ -1,7 +1,9 @@
 dotfiles.git
 ============
+This repo contains dotfiles (.bashrc, .nanorc, .emacs.d/init.el, etc.) for Ubuntu Linux.
+
 Clone and run this on a new EC2 instance running Ubuntu 12.04.2 LTS to
-configure your `bash` and `emacs` development environment as follows:
+configure your the environment as follows:
 
 ```sh
 cd $HOME
@@ -13,6 +15,10 @@ ln -sb dotfiles/.bashrc_custom .
 mv .emacs.d .emacs.d~
 ln -s dotfiles/.emacs.d .
 ```
+
+Note
+====
+This repo started as a modification of Stanford startup-class settings, and it should morph into my personal environment settings.
 
 See also http://github.com/startup-class/setup to install prerequisite
 programs. If all goes well, in addition to a more useful prompt, now you can
