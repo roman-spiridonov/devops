@@ -162,7 +162,8 @@ shopt -s histappend
 
 # Make prompt informative
 # See:  http://www.ukuug.org/events/linux2003/papers/bash_tips/
-PS1="\[\033[0;34m\][\u@\h:\w]$\[\033[0m\]"
+# PS1="\[\033[0;34m\][\u@\h:\w]$\[\033[0m\]"
+export PS1='\[\e[32m\]\D{%H:%M} \u@\h:\W> \[\e[0m\]'
 
 ## -----------------------
 ## -- 2) Set up aliases --
@@ -175,7 +176,8 @@ alias cp="cp -i"
 set -o noclobber
 
 # 2.2) Listing, directories, and motion
-alias ll="ls -alrtF --color"
+alias ls="ls --color=auto"
+alias ll="ls -alhF"
 alias la="ls -A"
 alias l="ls -CF"
 alias dir='ls --color=auto --format=vertical'
@@ -197,6 +199,7 @@ export VISUAL='emacs -nw'
 # 2.4) grep options
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;31' # green for matches
+alias grep="grep -P" #Perl-like regexp
 
 # 2.5) sort options
 # Ensures cross-platform sorting behavior of GNU sort.
@@ -225,3 +228,6 @@ fi
 
 ## Define any user-specific variables you want here.
 source ~/.bashrc_custom
+
+## Set "ls --color=auto" dir colors
+eval `dircolors ~/dotfiles/dircolors.256dark`
