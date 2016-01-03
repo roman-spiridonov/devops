@@ -230,4 +230,4 @@ fi
 source ~/.bashrc_custom
 
 ## Set "ls --color=auto" dir colors
-eval `dircolors ~/dotfiles/dircolors.256dark`
+eval `dircolors ~/.dircolors`
