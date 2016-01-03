@@ -51,6 +51,12 @@ bind ^a
 bindkey "Oc" next
 bindkey "Od" prev
 
+# RS: allow highlighting with shift+arrow
+# bind ^[[2D shift-left
+# bind ^[[2C shift-right
+# bind ^[[2A shift-up
+# bind ^[[2B shift-down
+
 # Emacs compatibility
 # Easy switching of windows without p/n confusion, as ctrl-p and ctrl-n
 # are frequently used in emacs but u/j are not...
