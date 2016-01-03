@@ -7,6 +7,14 @@ configure your the environment as follows:
 
 ```sh
 cd $HOME
+
+if [ -d ./dotfiles/ ]; then
+    mv dotfiles dotfiles~
+fi
+if [ -d .emacs.d/ ]; then
+    mv .emacs.d .emacs.d~
+fi
+
 git clone https://github.com/startup-class/dotfiles.git
 ln -sb dotfiles/.screenrc .
 ln -sb dotfiles/.bash_profile .
@@ -14,8 +22,7 @@ ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
 ln -sb dotfiles/.nanorc .
 ln -sb dotfiles/dircolors.256dark ./.dircolors
-mv .emacs.d .emacs.d~
-ln -s dotfiles/.emacs.d .
+ln -sf dotfiles/.emacs.d .
 ```
 
 Note
