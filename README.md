@@ -27,6 +27,21 @@ ln -sf dotfiles/.gitconfig .
 ln -sf dotfiles/.gitignore .
 ```
 
+Git notes
+====
+In .gitconfig, note that the `core.excludesfile` refers to `.gitignore` w/o path prefix. The files itself resides in the user's home directory (symbolic link to ~/dotfiles).
+This way it should work out of the box on both Win and Linux, but if it does not, edit this line to be one of the following.
+
+*nix:
+```
+git config --global core.excludesfile '~/.gitignore'
+```
+
+Windows:
+```
+git config --global core.excludesfile "%USERPROFILE%\.gitignore"
+```
+
 Note
 ====
 This repo started as a modification of Stanford startup-class settings, and it should morph into my personal environment settings.
