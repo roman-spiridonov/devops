@@ -4,7 +4,7 @@
 [core]
 	editor = emacs
 	autocrlf = true
-	excludesfile = .gitignore
+	excludesfile = ~/.gitignore
 [help]
 	autocorrect = 1
 [color]
