@@ -1,0 +1,17 @@
+[user]
+	name = RomaRS
+	email = romars@phystech.edu
+[core]
+	editor = emacs
+	autocrlf = true
+	excludesfile = .gitignore
+[help]
+	autocorrect = 1
+[color]
+	ui = auto
+[code]
+	editor = emacs
+[alias]
+	lga = log --graph --oneline --all --decorate
+[merge]
+	tool = emerge
