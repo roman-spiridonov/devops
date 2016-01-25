@@ -15,9 +15,9 @@ chmod +x ./devops/setup.sh
 ```
 
 * Windows (Cygwin):
-1. Go to link: https://cygwin.com/install.html
-2. Select packages: openssh, rsync, wget, git-core, zip+unzip
-3. Install apt-cyg: https://code.google.com/p/apt-cyg/, https://github.com/transcode-open/apt-cyg
+** Go to link: https://cygwin.com/install.html
+** Select packages: openssh, rsync, wget, git-core, zip+unzip
+** Install apt-cyg: https://code.google.com/p/apt-cyg/, https://github.com/transcode-open/apt-cyg
 ```	
 lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg
 install apt-cyg /bin
@@ -28,10 +28,12 @@ install apt-cyg /bin
 6. Set up $PATH env variable to not contain spaces. Use c:\progra~1 ("program files") and c:\progra~2 ("program files (x86)").
 7. Make sure to include c:\cygwin64\bin in $PATH
 8. SSH
-** chmod u+rwx known_hosts # for system to store identified hosts public keys
-** chmod 700 ~/.ssh # .ssh settings folder
-** chmod 400 endoftime.pem # private key
-** Create ~/.ssh/config folder like the following:
+```
+ chmod u+rwx known_hosts # for system to store identified hosts public keys
+ chmod 700 ~/.ssh # .ssh settings folder
+ chmod 400 key.pem # private key
+```
+Create ~/.ssh/config folder like the following:
 ```
 Host awshost
 HostName 54.213.193.148
