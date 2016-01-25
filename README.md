@@ -15,19 +15,19 @@ chmod +x ./devops/setup.sh
 ```
 
 * Windows (Cygwin):
-# Go to link: https://cygwin.com/install.html
-# Select packages: openssh, rsync, wget, git-core, zip+unzip
-# Install apt-cyg: https://code.google.com/p/apt-cyg/, https://github.com/transcode-open/apt-cyg
+1. Go to link: https://cygwin.com/install.html
+2. Select packages: openssh, rsync, wget, git-core, zip+unzip
+3. Install apt-cyg: https://code.google.com/p/apt-cyg/, https://github.com/transcode-open/apt-cyg
 ```	
 lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg
 install apt-cyg /bin
 ```
 
-# Set up user's home: /etc/passwd > set up user's home, group and bash. Hint: Use /cygdrive/c instead of /home/. 
-# Execute `~/devops/setup-cygwin.sh` to install totfiles. Note that the skeleton files reside in /etc/skel inside cygwin folder.
-# Set up $PATH env variable to not contain spaces. Use c:\progra~1 ("program files") and c:\progra~2 ("program files (x86)").
-# Make sure to include c:\cygwin64\bin in $PATH
-# SSH
+4. Set up user's home: /etc/passwd > set up user's home, group and bash. Hint: Use /cygdrive/c instead of /home/. 
+5. Execute `~/devops/setup-cygwin.sh` to install totfiles. Note that the skeleton files reside in /etc/skel inside cygwin folder.
+6. Set up $PATH env variable to not contain spaces. Use c:\progra~1 ("program files") and c:\progra~2 ("program files (x86)").
+7. Make sure to include c:\cygwin64\bin in $PATH
+8. SSH
 ** chmod u+rwx known_hosts # for system to store identified hosts public keys
 ** chmod 700 ~/.ssh # .ssh settings folder
 ** chmod 400 endoftime.pem # private key
