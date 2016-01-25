@@ -47,10 +47,8 @@ dotfiles
 This folder contains dotfiles (.bashrc, .nanorc, .emacs.d/init.el, etc.) for Ubuntu Linux and Cygwin.
 
 The folder structure is as follows:
-* Common dotfiles (cross-OS): `/dotfiles/*`
+* Common dotfiles (cross-OS) + Ubuntu: `/dotfiles/*`
 * Cygwin-specific dotfiles: `/dotfiles/cygwin/*`
-* Ubuntu-specific dotfiles: `/dotfiles/ubuntu/*`
-
 
 Clone and run this on a new EC2 instance running Ubuntu 12.04.2 LTS to
 configure your the environment as follows:
@@ -58,14 +56,10 @@ configure your the environment as follows:
 ```sh
 cd $HOME
 
-if [ -d ./dotfiles/ ]; then
-    mv dotfiles dotfiles~
-fi
 if [ -d .emacs.d/ ]; then
     mv .emacs.d .emacs.d~
 fi
 
-git clone https://github.com/startup-class/dotfiles.git
 ln -sb dotfiles/.screenrc .
 ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
