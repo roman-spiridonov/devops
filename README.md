@@ -15,9 +15,9 @@ chmod +x ./devops/setup.sh
 ```
 
 * Windows (Cygwin):
-** Go to link: https://cygwin.com/install.html
-** Select packages: openssh, rsync, wget, git-core, zip+unzip
-** Install apt-cyg: https://code.google.com/p/apt-cyg/, https://github.com/transcode-open/apt-cyg
+	* Go to link: https://cygwin.com/install.html
+	* Select packages: openssh, rsync, wget, git-core, zip+unzip
+	* Install apt-cyg: https://code.google.com/p/apt-cyg/, https://github.com/transcode-open/apt-cyg
 ```	
 lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg
 install apt-cyg /bin
