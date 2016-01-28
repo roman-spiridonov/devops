@@ -9,8 +9,9 @@ The procedure depends on the OS:
 * Ubuntu: 
 ```
 cd $HOME
+sudo apt-get install -y git-core
 git clone https://github.com/roman-spiridonov/devops
-chmod +x ./devops/setup.sh
+chmod +x ./devops/setup-ubuntu.sh
 ./devops/setup-ubuntu.sh
 ```
 
@@ -39,6 +40,15 @@ Host awshost
 HostName 54.213.193.148
 User ubuntu
 IdentityFile ~/.ssh/key.pem
+```
+Finally, set up SSH on Git:
+* Generate new key if necessary:
+```
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"  # Creates a new ssh key, using the provided email as a label
+```
+* Add the key to SSH agent:
+```
+eval $(ssh-agent -s) # launch SSH agentssh-add ~/.ssh/cg_aws_spiridonov.pem  # add key
 ```
 
 
