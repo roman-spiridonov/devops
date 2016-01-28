@@ -7,10 +7,10 @@ sudo apt-get update
 sudo apt-get install -y curl
 
 # Install C compiler gcc and the build tool make
-sudo apt-get install -y make gcc
+sudo apt-get install -y make gcc g++
 
 # Install python
-sudo apt-get install python-software-properties python
+sudo apt-get install -y python-software-properties python
 
 # Install sqlite by compiling from sources (for the current user)
 # Update the version as needed: http://www.sqlite.org/download.html
@@ -27,7 +27,7 @@ make
 make install
 
 mkdir ~/bin; cd ~/bin # Current user's binaries
-ln -s ../${sqlite_targz%.*.*}/bin/sqlite3 . # Link sqlite3 to ~/bin
+ln -s ../downloads/${sqlite_targz%.*.*}/bin/sqlite3 . # Link sqlite3 to ~/bin
 cd
 export PATH=$HOME/bin:$PATH
 
@@ -53,7 +53,7 @@ node --version
 
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
-npm install -g jshint
+sudo npm install -g jshint
 
 # Install rlwrap to provide libreadline features with node
 # See: http://nodejs.org/api/repl.html#repl_repl
