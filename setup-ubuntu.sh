@@ -26,10 +26,14 @@ cd ${sqlite_targz%.*.*}
 make
 make install
 
+sudo ldconfig -v # tell the system that new libraries are available
+
 mkdir ~/bin; cd ~/bin # Current user's binaries
-ln -s ../downloads/${sqlite_targz%.*.*}/bin/sqlite3 . # Link sqlite3 to ~/bin
+ln -s ../sqlite/bin/sqlite3 . # Link sqlite3 to ~/bin
 cd
 export PATH=$HOME/bin:$PATH
+
+which sqlite3
 
 # **** NVM from sources ****
 # Install nvm: node-version manager
