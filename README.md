@@ -44,11 +44,11 @@ IdentityFile ~/.ssh/key.pem
 Finally, set up SSH on Git:
 * Generate new key if necessary:
 ```
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com" #Creates a new ssh key, using the provided email as a label
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com" # Creates a new ssh key, using the provided email as a label
 ```
 * Add the key to SSH agent:
 ```
-eval $(ssh-agent -s) #launch SSH agent
+eval $(ssh-agent -s) # launch SSH agent
 ssh-add ~/.ssh/cg_aws_spiridonov.pem  # add key
 ```
 
