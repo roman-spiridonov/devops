@@ -78,8 +78,8 @@ ln -sb dotfiles/.bashrc_custom .
 ln -sb dotfiles/.nanorc .
 ln -sb dotfiles/dircolors.256dark ./.dircolors
 ln -sf dotfiles/.emacs.d .
-ln -sf dotfiles/.gitconfig .
-ln -sf dotfiles/.gitignore .
+ln -sb dotfiles/.gitconfig .
+ln -sb dotfiles/.gitignore .
 ```
 
 Git notes
