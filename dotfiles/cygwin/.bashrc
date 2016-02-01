@@ -121,6 +121,9 @@ alias grep="grep -P"
 # CLEAR SCREEN (CTRL+L)
 alias clear='printf "\033c"'
 
+# Find proper emacs init file for cygwin installation
+# See http://www.emacswiki.org/emacs/InitFile
+alias emacs='emacs -q -l ~/.emacs.d/init.el'
 
 # Umask
 #

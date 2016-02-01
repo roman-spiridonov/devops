@@ -13,6 +13,7 @@ ln -sb devops/dotfiles/.nanorc .
 ln -sb devops/dotfiles/dircolors.256dark ./.dircolors
 ln -sb devops/dotfiles/.gitconfig .
 ln -sb devops/dotfiles/.gitignore .
+ln -sf devops/dotfiles/.emacs.d .
 
 # OS-specific
 ln -sb devops/dotfiles/cygwin/.bash_profile .

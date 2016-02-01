@@ -76,13 +76,13 @@ ln -sb devops/dotfiles/.nanorc .
 ln -sb devops/dotfiles/dircolors.256dark ./.dircolors
 ln -sb devops/dotfiles/.gitconfig .
 ln -sb devops/dotfiles/.gitignore .
+ln -sf devops/dotfiles/.emacs.d .
 
 # Use for Ubuntu VM
 ln -sb devops/dotfiles/.screenrc .
 ln -sb devops/dotfiles/.bash_profile .
 ln -sb devops/dotfiles/.bashrc .
 ln -sb devops/dotfiles/.bashrc_custom .
-ln -sf devops/dotfiles/.emacs.d .
 
 # Use for cygwin
 ln -sb devops/dotfiles/cygwin/.bash_profile .
