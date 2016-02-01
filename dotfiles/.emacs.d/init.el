@@ -119,3 +119,11 @@
 ;; Page-Up, Page-Down
 (global-set-key (kbd "\e[1;5~") 'scroll-up)
 (global-set-key (kbd "\e[1;6~") 'scroll-down)
+
+;; Markdown mode (*.md) https://github.com/jrblevin/markdown-mode
+(add-to-list 'load-path "~/.emacs.d/lisp/markdown-mode")
+(autoload 'markdown-mode "markdown-mode"
+  "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
