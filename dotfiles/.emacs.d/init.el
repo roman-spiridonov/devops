@@ -16,36 +16,17 @@
 (require 'whitespace)
 (require 'dired-x)
 (require 'compile)
-(ido-mode t)
-(menu-bar-mode -1)
-(normal-erase-is-backspace-mode 0) ; IMPORTANT FOR CYGWIN
-(put 'downcase-region 'disabled nil)
-(put 'upcase-region 'disabled nil)
-(setq column-number-mode t)
-(setq inhibit-startup-message t)
-(setq save-abbrevs nil)
-(setq show-trailing-whitespace t)
+(ido-mode t) 
+; (menu-bar-mode -1) ; Disables the menu on top
+(normal-erase-is-backspace-mode 0) ; Cygwin compatibility for backspace
+(put 'downcase-region 'disabled nil) ; Enable C-x C-d for conversion of the region to lower case
+(put 'upcase-region 'disabled nil) ; Enable C-x C-u for conversion of the region to upper case
+(setq column-number-mode t) ; Enable column number mode (shows column number is status bar)
+(setq inhibit-startup-message t) ; Disable start screen in emacs
+(setq save-abbrevs nil) ; Save abbrevs when files are saved? (https://www.emacswiki.org/emacs/AbbrevMode)
+(setq show-trailing-whitespace t) 
 (setq suggest-key-bindings t)
 (setq vc-follow-symlinks t)
-
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:inherit autoface-default :strike-through nil :underline nil :slant normal :weight normal :height 120 :width normal :family "monaco"))))
- '(column-marker-1 ((t (:background "red"))) t)
- '(diff-added ((t (:foreground "cyan"))) t)
- '(flymake-errline ((((class color) (background light)) (:background "Red"))) t)
- '(font-lock-comment-face ((((class color) (min-colors 8) (background light)) (:foreground "red"))))
- '(fundamental-mode-default ((t (:inherit default))) t)
- '(highlight ((((class color) (min-colors 8)) (:background "white" :foreground "magenta"))))
- '(isearch ((((class color) (min-colors 8)) (:background "yellow" :foreground "black"))))
- '(linum ((t (:foreground "black" :weight bold))))
- '(region ((((class color) (min-colors 8)) (:background "white" :foreground "magenta"))))
- '(secondary-selection ((((class color) (min-colors 8)) (:background "gray" :foreground "cyan"))))
- '(show-paren-match ((((class color) (background light)) (:background "black"))) t)
- '(vertical-border ((t nil))))
 
 ;; ------------
 ;; -- Macros --
@@ -87,11 +68,8 @@
 ;;(require 'color-theme-solarized)
 ;;(color-theme-solarized-dark)
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(frame-background-mode (quote dark)))
+(enable-theme 'solarized)
 ;; ---------------------------
 
 ;; --------------------------
@@ -140,4 +118,23 @@
 ;; Page-Up, Page-Down
 (global-set-key (kbd "\e[1;5~") 'scroll-up)
 (global-set-key (kbd "\e[1;6~") 'scroll-down)
+;; ------------------------------
+
+;; ------------------------------
+;; -- Custom functions         --
+;; ------------------------------
+(defun wc ()
+  "Count the words in the current buffer, show the result in the minibuffer"
+  (interactive)          ; *** This is the line that you need to add
+  (save-excursion 
+    (save-restriction
+      (widen)
+      (goto-char (point-min))
+      (let ((count 0))
+      (while (forward-word 1)
+	(setq count(1+ count)))
+      (message "There are %d words in the buffer" count)))))
+
+;; counting functions
+(defalias 'lc 'count-lines-page)
 ;; ------------------------------
