@@ -90,6 +90,9 @@ ln -sb devops/dotfiles/.gitignore .
 
 ln -sf devops/dotfiles/.emacs.d .
 
+cp devops/dotfiles/.mc .
+cp .mc/lib/mc-solarized-skin/solarized.ini /usr/share/mc/skins  # https://www.midnight-commander.org/wiki/ru/doc/common/skins 
+
 # OS-specific
 ln -sb devops/dotfiles/.bash_profile .
 ln -sb devops/dotfiles/.bashrc .

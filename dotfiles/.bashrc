@@ -230,3 +230,4 @@ source ~/.bashrc_custom
 
 ## Set "ls --color=auto" dir colors
 eval `dircolors ~/.dircolors`
+MC_SKIN=~/.mc/lib/mc-solarized-skin/solarized.ini
