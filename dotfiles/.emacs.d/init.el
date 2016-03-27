@@ -75,6 +75,10 @@
 (add-to-list 'auto-mode-alist '("\\.styl$" . sws-mode))
 (add-to-list 'auto-mode-alist '("\\.jade$" . jade-mode))
 
+;; ---------------------------
+;; -- Color schemes         --
+;; ---------------------------
+;; Solarized
 (add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized")
 (load-theme 'solarized t)
 ;;(require 'color-theme)
@@ -88,8 +92,25 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(frame-background-mode (quote dark)))
+;; ---------------------------
 
-;; Shift+arrow key support in screen
+;; --------------------------
+;; -- Major modes          --
+;; --------------------------
+;; Markdown mode (*.md) https://github.com/jrblevin/markdown-mode
+(add-to-list 'load-path "~/.emacs.d/lisp/markdown-mode")
+(autoload 'markdown-mode "markdown-mode"
+  "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+;;--------------------------
+
+ 
+;; ------------------------------
+;; -- GNU Screen compatibility --
+;; ------------------------------
+;; Shift+arrow key support 
 (define-key global-map "\e[1;4D" (kbd "M-S-<left>"))
 (define-key global-map "\e[1;4C" (kbd "M-S-<right>"))
 (define-key global-map "\e[1;4A" (kbd "M-S-<up>"))
@@ -119,11 +140,4 @@
 ;; Page-Up, Page-Down
 (global-set-key (kbd "\e[1;5~") 'scroll-up)
 (global-set-key (kbd "\e[1;6~") 'scroll-down)
-
-;; Markdown mode (*.md) https://github.com/jrblevin/markdown-mode
-(add-to-list 'load-path "~/.emacs.d/lisp/markdown-mode")
-(autoload 'markdown-mode "markdown-mode"
-  "Major mode for editing Markdown files" t)
-(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+;; ------------------------------
