@@ -208,4 +208,4 @@ alias emacs='emacs -q -l ~/.emacs.d/init.el'
 # 
 # alias cd=cd_func
 
-eval `dircolors ~/dotfiles/dircolors.256dark`
+eval `dircolors ~/.dircolors`
