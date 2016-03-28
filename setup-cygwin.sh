@@ -15,7 +15,7 @@ ln -sb devops/dotfiles/.gitconfig .
 ln -sb devops/dotfiles/.gitignore .
 ln -sf devops/dotfiles/.emacs.d .
 
-cp devops/dotfiles/.mc .
+cp -aR devops/dotfiles/.mc .
 cp ~/.mc/lib/mc-solarized-skin/solarized.ini /usr/share/mc/skins  # https://www.midnight-commander.org/wiki/ru/doc/common/skins 
 
 # OS-specific
