@@ -12,7 +12,7 @@ fi
 ln -sb devops/dotfiles/.nanorc .
 ln -sb devops/dotfiles/dircolors.256dark ./.dircolors
 ln -sb devops/dotfiles/.gitconfig .
-ln -sb devops/dotfiles/.gitignore .
+ln -sb devops/dotfiles/.gitexcludes .
 ln -sf devops/dotfiles/.emacs.d .
 
 cp devops/dotfiles/.mc .

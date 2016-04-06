@@ -17,7 +17,7 @@
 (require 'dired-x)
 (require 'compile)
 (ido-mode t) 
-; (menu-bar-mode -1) ; Disables the menu on top
+(menu-bar-mode -1) ; Disables the menu on top
 (normal-erase-is-backspace-mode 0) ; Cygwin compatibility for backspace
 (put 'downcase-region 'disabled nil) ; Enable C-x C-d for conversion of the region to lower case
 (put 'upcase-region 'disabled nil) ; Enable C-x C-u for conversion of the region to upper case
