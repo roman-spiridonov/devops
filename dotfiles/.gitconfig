@@ -15,3 +15,5 @@
 	lga = log --graph --oneline --all --decorate
 [merge]
 	tool = emerge
+[push]
+	default = simple
