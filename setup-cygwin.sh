@@ -24,3 +24,11 @@ ln -sb devops/dotfiles/cygwin/.bashrc .
 ln -sb devops/dotfiles/cygwin/.minttyrc .
 ln -sb devops/dotfiles/cygwin/.inputrc .
 ln -sb devops/dotfiles/cygwin/.profile .
+
+# Config files
+
+# nginx
+cp -aR devops/conf/nginx/ /etc/nginx/
+if ! [ -d /var/lib/nginx/tmp ]; then  # known issue: tmp dir does not exist
+    mkdir -p /var/lib/nginx/tmp
+fi
