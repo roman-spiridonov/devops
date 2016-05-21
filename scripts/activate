@@ -1,0 +1,18 @@
+#!/bin/bash
+# Activate conda environment script
+# See also https://gist.github.com/mangecoeur/5161488 (not usig a subshell for Cygwin)
+# $ANACONDA_HOME$ env variable must be set to Anaconda installation path before executing a script
+
+CONDA_ENV=$(cygpath "$ANACONDA_HOME/envs/$1")
+
+if [ "" = "$1" ]; then
+    echo "must specify an env"
+    exit 2
+fi
+
+#Activate
+export PATH="$CONDA_ENV:$PATH"
+export PS1="$PS1($1) "
+
+# http://unix.stackexchange.com/questions/108873/removing-a-directory-from-path
+# PATH=$(ADD_PART="$CONDA_ENV" sh -c 'if echo ":$PATH:" | grep -q ":$ADD_PART:"; then echo "$PATH"; else echo "$ADD_PART:$PATH"; fi')

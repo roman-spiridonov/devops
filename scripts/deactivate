@@ -1,0 +1,15 @@
+#!/bin/bash
+# Deactivate conda environment script 
+# $ANACONDA_HOME$ env variable must be set to Anaconda installation path before executing a script
+
+CONDA_ENV=$(cygpath "$ANACONDA_HOME/envs/$1")
+
+if [ "" = "$1" ]; then
+    echo "must specify an env"
+    exit 2
+fi
+
+#Deactivate
+# http://stackoverflow.com/questions/15081156/how-to-remove-particular-path-in-cygwin
+PATH=$(REMOVE_PART="$CONDA_ENV" sh -c 'echo ":$PATH:" | sed "s@:$REMOVE_PART:@:@g;s@^:\(.*\):\$@\1@"')
+PS1="\[\e[32m\]\D{%H:%M} \u@\h:\W> \[\e[0m\]"  # TODO: write similar sed replace for PS1 prompt
