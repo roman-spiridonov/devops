@@ -1,0 +1,16 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AutoFileName",
+		"Dracula Color Scheme",
+		"Emmet",
+		"Nodejs",
+		"Package Control",
+		"PackageResourceViewer",
+		"SublimeCodeIntel"
+	]
+}
