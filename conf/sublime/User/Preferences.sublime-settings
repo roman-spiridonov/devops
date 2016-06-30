@@ -1,4 +1,5 @@
 {
+	"afn_use_project_root": true,
 	"auto_complete": true,
 	"auto_complete_commit_on_tab": false,
 	"auto_complete_cycle": false,
@@ -15,10 +16,10 @@
 			"characters": ".",
 			"selector": "source.js"
 		},
-	    {
-		    "characters": "/",
-		    "selector": "string.quoted.double.html,string.quoted.single.html, source.css"
-        }
+		{
+			"characters": "/",
+			"selector": "string.quoted.double.html,string.quoted.single.html, source.css"
+		}
 	],
 	"auto_complete_with_fields": false,
 	"bold_folder_labels": true,
@@ -45,7 +46,5 @@
 	"match_brackets_content": true,
 	"match_brackets_square": true,
 	"tab_completion": true,
-	"wide_caret": false,
-
-	"afn_use_project_root": true,
+	"wide_caret": false
 }
