@@ -169,11 +169,11 @@
         <setting key="Panel.Right" name="CaseSensitiveSort" type="qword" value="0000000000000000"/>
         <setting key="Panel.Right" name="DirectoriesFirst" type="qword" value="0000000000000001"/>
         <setting key="Panel.Right" name="NumericSort" type="qword" value="0000000000000000"/>
-        <setting key="Panel.Right" name="ReverseSortOrder" type="qword" value="0000000000000001"/>
+        <setting key="Panel.Right" name="ReverseSortOrder" type="qword" value="0000000000000000"/>
         <setting key="Panel.Right" name="SelectedFirst" type="qword" value="0000000000000000"/>
         <setting key="Panel.Right" name="ShortNames" type="qword" value="0000000000000000"/>
         <setting key="Panel.Right" name="SortGroups" type="qword" value="0000000000000000"/>
-        <setting key="Panel.Right" name="SortMode" type="qword" value="0000000000000003"/>
+        <setting key="Panel.Right" name="SortMode" type="qword" value="0000000000000001"/>
         <setting key="Panel.Right" name="Type" type="qword" value="0000000000000000"/>
         <setting key="Panel.Right" name="ViewMode" type="qword" value="0000000000000003"/>
         <setting key="Panel.Right" name="Visible" type="qword" value="0000000000000001"/>
@@ -310,10 +310,10 @@
     </generalconfig>
     <localconfig>
         <setting key="Panel" name="LeftFocus" type="qword" value="0000000000000000"/>
-        <setting key="Panel.Left" name="CurFile" type="text" value="What.Lies.Beneath.2000.WEB-DL.720p.3xRUS.ENG.Subs.mkv"/>
-        <setting key="Panel.Left" name="Folder" type="text" value="D:\"/>
-        <setting key="Panel.Right" name="CurFile" type="text" value="[rutracker.org].t4113554.torrent"/>
-        <setting key="Panel.Right" name="Folder" type="text" value="C:\Users\Spiridonov\Downloads"/>
+        <setting key="Panel.Left" name="CurFile" type="text" value=".."/>
+        <setting key="Panel.Left" name="Folder" type="text" value="C:\Program Files\Far Manager"/>
+        <setting key="Panel.Right" name="CurFile" type="text" value="FastFind Enhanced macro.lua"/>
+        <setting key="Panel.Right" name="Folder" type="text" value="C:\Users\Spiridonov\AppData\Roaming\Far Manager\Profile\Macros\scripts"/>
     </localconfig>
     <colors>
         <object name="Clock" background="FF000003" foreground="FF000000" flags="fg4bit bg4bit"/>
@@ -929,6 +929,18 @@
                 <key name="1E26A927-5135-48C6-88B2-845FB8945484" description="ProcList">
                     <value name="SortMode" type="qword" value="0000000000000001"/>
                     <value name="StartPanelMode" type="qword" value="0000000000000001"/>
+                </key>
+            </hierarchicalconfig>
+        </plugin>
+        <plugin guid="3106D308-A685-415C-96E6-84C8EBB361FE">
+            <hierarchicalconfig>
+                <key name="3106D308-A685-415C-96E6-84C8EBB361FE" description="FastFind Enhanced">
+                    <value name="optDefaultScrolling" type="qword" value="0000000000000000"/>
+                    <value name="optForceScrollEdge" type="qword" value="0000000000000010"/>
+                    <value name="optPanelSidePosition" type="qword" value="0000000000000001"/>
+                    <value name="optPrecedingAsterisk" type="qword" value="0000000000000001"/>
+                    <value name="optShorterSearch" type="qword" value="0000000000000001"/>
+                    <value name="optUseXlat" type="qword" value="0000000000000000"/>
                 </key>
             </hierarchicalconfig>
         </plugin>
