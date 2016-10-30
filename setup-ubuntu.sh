@@ -83,7 +83,6 @@ if [ -d .emacs.d/ ]; then
 fi
 
 # Global
-ln -sb devops/dotfiles/.nanorc .
 ln -sb devops/dotfiles/dircolors.256dark ./.dircolors
 ln -sb devops/dotfiles/.gitconfig .
 ln -sb devops/dotfiles/.gitexcludes .
@@ -98,3 +97,4 @@ ln -sb devops/dotfiles/.bash_profile .
 ln -sb devops/dotfiles/.bashrc .
 ln -sb devops/dotfiles/.bashrc_custom .
 ln -sb devops/dotfiles/.screenrc .
+ln -sb devops/dotfiles/.nanorc .

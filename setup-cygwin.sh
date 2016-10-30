@@ -9,7 +9,6 @@ fi
 
 
 # Global
-ln -sb devops/dotfiles/.nanorc .
 ln -sb devops/dotfiles/dircolors.256dark ./.dircolors
 ln -sb devops/dotfiles/.gitconfig .
 ln -sb devops/dotfiles/.gitexcludes .
@@ -24,6 +23,7 @@ ln -sb devops/dotfiles/cygwin/.bashrc .
 ln -sb devops/dotfiles/cygwin/.minttyrc .
 ln -sb devops/dotfiles/cygwin/.inputrc .
 ln -sb devops/dotfiles/cygwin/.profile .
+ln -sb devops/dotfiles/cygwin/.nanorc .
 
 # Scripts
 if ! [ -d bin ]; then
@@ -34,7 +34,7 @@ ln -sb ~/devops/scripts/deactivate ./bin/deactivate
 
 # Config files
 
-# nginxx`
+# nginx
 cp -aR devops/conf/nginx/ /etc/nginx/
 if ! [ -d /var/lib/nginx/tmp ]; then  # known issue: tmp dir does not exist
     mkdir -p /var/lib/nginx/tmp

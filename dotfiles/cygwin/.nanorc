@@ -14,6 +14,7 @@ set smooth
 set nowrap
  
 # Add Syntax highlighting. Comment out any you don't want.
-include "~/devops/dotfiles/syntax-nanorc/*.nanorc"
+include "/usr/share/nano/*.nanorc"
+# include "~/devops/dotfiles/syntax-nanorc/*.nanorc"
 
 # See 'man nanorc' for more options.
