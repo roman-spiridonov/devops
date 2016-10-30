@@ -208,5 +208,8 @@ alias emacs='emacs -q -l ~/.emacs.d/init.el'
 # 
 # alias cd=cd_func
 
-eval `dircolors ~/.dircolors`
+if [[ $TERM != "cygwin" ]]; then  # execute only in native mintty 
+     eval `dircolors ~/.dircolors`
+fi
+
 MC_SKIN=~/.mc/lib/mc-solarized-skin/solarized.ini
