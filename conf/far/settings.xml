@@ -48,7 +48,7 @@
         <setting key="Editor" name="EditOpenedForWrite" type="qword" value="0000000000000001"/>
         <setting key="Editor" name="EditorCursorBeyondEOL" type="qword" value="0000000000000001"/>
         <setting key="Editor" name="ExpandTabs" type="qword" value="0000000000000000"/>
-        <setting key="Editor" name="ExternalEditorName" type="text" value="&quot;c:\sublime\sublime_text.exe&quot; &quot;!\!.!&quot;"/>
+        <setting key="Editor" name="ExternalEditorName" type="text" value=""/>
         <setting key="Editor" name="F8CPs" type="text" value=""/>
         <setting key="Editor" name="FileSizeLimit" type="qword" value="0000000000000000"/>
         <setting key="Editor" name="KeepEditorEOL" type="qword" value="0000000000000001"/>
@@ -309,11 +309,11 @@
         <setting key="XLat" name="WordDivForXlat" type="text" value=" 	!#$%^&amp;*()+|=\/@?"/>
     </generalconfig>
     <localconfig>
-        <setting key="Panel" name="LeftFocus" type="qword" value="0000000000000000"/>
-        <setting key="Panel.Left" name="CurFile" type="text" value=".."/>
-        <setting key="Panel.Left" name="Folder" type="text" value="C:\Program Files\Far Manager"/>
-        <setting key="Panel.Right" name="CurFile" type="text" value="FastFind Enhanced macro.lua"/>
-        <setting key="Panel.Right" name="Folder" type="text" value="C:\Users\Spiridonov\AppData\Roaming\Far Manager\Profile\Macros\scripts"/>
+        <setting key="Panel" name="LeftFocus" type="qword" value="0000000000000001"/>
+        <setting key="Panel.Left" name="CurFile" type="text" value="[Coursera] Startup Engineering (2013)"/>
+        <setting key="Panel.Left" name="Folder" type="text" value="C:\EDUCATION\E-Learning\# IT"/>
+        <setting key="Panel.Right" name="CurFile" type="text" value="FastStone Image Viewer v5.2 (2014-09-24) Final Ml_Rus"/>
+        <setting key="Panel.Right" name="Folder" type="text" value="C:\_ARCHIV"/>
     </localconfig>
     <colors>
         <object name="Clock" background="FF000003" foreground="FF000000" flags="fg4bit bg4bit"/>
@@ -929,18 +929,6 @@
                 <key name="1E26A927-5135-48C6-88B2-845FB8945484" description="ProcList">
                     <value name="SortMode" type="qword" value="0000000000000001"/>
                     <value name="StartPanelMode" type="qword" value="0000000000000001"/>
-                </key>
-            </hierarchicalconfig>
-        </plugin>
-        <plugin guid="3106D308-A685-415C-96E6-84C8EBB361FE">
-            <hierarchicalconfig>
-                <key name="3106D308-A685-415C-96E6-84C8EBB361FE" description="FastFind Enhanced">
-                    <value name="optDefaultScrolling" type="qword" value="0000000000000000"/>
-                    <value name="optForceScrollEdge" type="qword" value="0000000000000010"/>
-                    <value name="optPanelSidePosition" type="qword" value="0000000000000001"/>
-                    <value name="optPrecedingAsterisk" type="qword" value="0000000000000001"/>
-                    <value name="optShorterSearch" type="qword" value="0000000000000001"/>
-                    <value name="optUseXlat" type="qword" value="0000000000000000"/>
                 </key>
             </hierarchicalconfig>
         </plugin>
