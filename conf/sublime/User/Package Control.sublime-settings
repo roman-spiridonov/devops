@@ -5,10 +5,12 @@
 	],
 	"installed_packages":
 	[
+		"Add Folder To Project",
 		"AutoFileName",
 		"Color Highlighter",
 		"Dracula Color Scheme",
 		"Emmet",
+		"Folder2Project",
 		"HTML-CSS-JS Prettify",
 		"LESS",
 		"Nodejs",
