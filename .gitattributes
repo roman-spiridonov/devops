@@ -1,0 +1,3 @@
+.* eol=lf
+*.sh eol=lf
+*.nanorc eol=lf
