@@ -30,8 +30,10 @@ ln -b devops/dotfiles/cygwin/.nanorc .
 if ! [ -d bin ]; then
     mkdir bin
 fi 
-ln -b ~/devops/scripts/activate ./bin/activate
-ln -b ~/devops/scripts/deactivate ./bin/deactivate
+ln -b ~/devops/bin/activate ./bin/activate
+ln -b ~/devops/bin/deactivate ./bin/deactivate
+ln -b ~/devops/bin/intellij_diff.sh ./bin/intellij_diff.sh
+ln -b ~/devops/bin/intellij_merge.sh ./bin/intellij_merge.sh
 
 # Config files
 

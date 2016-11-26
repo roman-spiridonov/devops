@@ -13,7 +13,18 @@
 	editor = emacs
 [alias]
 	lga = log --graph --oneline --all --decorate
-[merge]
-	tool = emerge
 [push]
 	default = simple
+[merge]
+	tool = emerge
+[diff]
+	;external = extDiff.sh
+[mergetool "kdiff3"]
+	cmd = kdiff3 $BASE $LOCAL $REMOTE -o $MERGED
+[difftool "kdiff3"]
+	cmd = kdiff3 \"$(cygpath -wla $LOCAL)\" \"$(cygpath -wla $REMOTE)\"
+[mergetool "intellij"]
+	cmd = intellij_merge.sh $LOCAL $REMOTE $BASE $MERGED
+	;trustExitCode = false
+[difftool "intellij"]
+	cmd = intellij_diff.sh $LOCAL $REMOTE
