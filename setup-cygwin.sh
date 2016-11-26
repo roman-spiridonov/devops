@@ -9,28 +9,29 @@ fi
 
 
 # Global
-ln -sb devops/dotfiles/dircolors.256dark ./.dircolors
-ln -sb devops/dotfiles/.gitconfig .
-ln -sb devops/dotfiles/.gitexcludes .
-ln -sf devops/dotfiles/.emacs.d .
+# Using hard links instead of symbolic for compatibility with Windows: http://stackoverflow.com/a/17996448/7213548
+ln -b devops/dotfiles/dircolors.256dark ./.dircolors
+ln -b devops/dotfiles/.gitconfig .
+ln -b devops/dotfiles/.gitexcludes .
+cp -aR devops/dotfiles/.emacs.d .
 
 cp -aR devops/dotfiles/.mc .
 cp ~/.mc/lib/mc-solarized-skin/solarized.ini /usr/share/mc/skins  # https://www.midnight-commander.org/wiki/ru/doc/common/skins 
 
 # OS-specific
-ln -sb devops/dotfiles/cygwin/.bash_profile .
-ln -sb devops/dotfiles/cygwin/.bashrc .
-ln -sb devops/dotfiles/cygwin/.minttyrc .
-ln -sb devops/dotfiles/cygwin/.inputrc .
-ln -sb devops/dotfiles/cygwin/.profile .
-ln -sb devops/dotfiles/cygwin/.nanorc .
+ln -b devops/dotfiles/cygwin/.bash_profile .
+ln -b devops/dotfiles/cygwin/.bashrc .
+ln -b devops/dotfiles/cygwin/.minttyrc .
+ln -b devops/dotfiles/cygwin/.inputrc .
+ln -b devops/dotfiles/cygwin/.profile .
+ln -b devops/dotfiles/cygwin/.nanorc .
 
 # Scripts
 if ! [ -d bin ]; then
     mkdir bin
 fi 
-ln -sb ~/devops/scripts/activate ./bin/activate
-ln -sb ~/devops/scripts/deactivate ./bin/deactivate
+ln -b ~/devops/scripts/activate ./bin/activate
+ln -b ~/devops/scripts/deactivate ./bin/deactivate
 
 # Config files
 
