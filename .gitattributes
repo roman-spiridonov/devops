@@ -1,3 +1,4 @@
 .* eol=lf
 *.sh eol=lf
 *.nanorc eol=lf
+*.conf eol=lf
