@@ -2,6 +2,10 @@
 #############
 **/.idea/
 
+# Package managers #
+####################
+**/node_modules/
+
 # Compiled source #
 ###################
 *.com
