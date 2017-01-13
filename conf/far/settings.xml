@@ -1045,6 +1045,42 @@
                 </key>
             </hierarchicalconfig>
         </plugin>
+        <plugin guid="8719879F-BB66-4FBE-ACC2-F877C2E581F1">
+            <hierarchicalconfig>
+                <key name="8719879F-BB66-4FBE-ACC2-F877C2E581F1" description="Visualizer">
+                    <value name="ColorOfBookmarks" type="hex" value="03,00,00,00,00,00,00,00,00,00,00,00,02,00,00,00,00,00,00,00,00,00,00,00"/>
+                    <value name="ColorOfCrossHorizontal" type="hex" value="03,00,00,00,00,00,00,00,00,00,00,00,07,00,00,00,00,00,00,00,00,00,00,00"/>
+                    <value name="ColorOfCrossVertical" type="hex" value="03,00,00,00,00,00,00,00,00,00,00,00,07,00,00,00,00,00,00,00,00,00,00,00"/>
+                    <value name="ColorOfCursor" type="hex" value="03,00,00,00,00,00,00,00,00,00,00,00,0C,00,00,00,00,00,00,00,00,00,00,00"/>
+                    <value name="ColorOfEOF" type="hex" value="03,00,00,00,00,00,00,00,00,00,00,00,0C,00,00,00,00,00,00,00,00,00,00,00"/>
+                    <value name="ColorOfEOLCR" type="hex" value="03,00,00,00,00,00,00,00,00,00,00,00,08,00,00,00,00,00,00,00,00,00,00,00"/>
+                    <value name="ColorOfEOLLF" type="hex" value="03,00,00,00,00,00,00,00,00,00,00,00,07,00,00,00,00,00,00,00,00,00,00,00"/>
+                    <value name="ColorOfEOLNULL" type="hex" value="03,00,00,00,00,00,00,00,00,00,00,00,0C,00,00,00,00,00,00,00,00,00,00,00"/>
+                    <value name="ColorOfEOLNormal" type="hex" value="03,00,00,00,00,00,00,00,00,00,00,00,08,00,00,00,00,00,00,00,00,00,00,00"/>
+                    <value name="ColorOfRightBorder" type="hex" value="03,00,00,00,00,00,00,00,00,00,00,00,05,00,00,00,00,00,00,00,00,00,00,00"/>
+                    <value name="ColorOfStackBookmarks" type="hex" value="03,00,00,00,00,00,00,00,00,00,00,00,06,00,00,00,00,00,00,00,00,00,00,00"/>
+                    <value name="ColorOfTabs" type="hex" value="03,00,00,00,00,00,00,00,00,00,00,00,0F,00,00,00,00,00,00,00,00,00,00,00"/>
+                    <value name="ColorOfTabs2" type="hex" value="03,00,00,00,00,00,00,00,00,00,00,00,07,00,00,00,00,00,00,00,00,00,00,00"/>
+                    <value name="OnOffSwitch" type="qword" value="0000000000000001"/>
+                    <value name="ShowBookmarks" type="qword" value="0000000000000000"/>
+                    <value name="ShowCross" type="qword" value="0000000000000003"/>
+                    <value name="ShowCrossOn" type="qword" value="0000000000000000"/>
+                    <value name="ShowCrossOnTop" type="qword" value="0000000000000000"/>
+                    <value name="ShowCursorOn" type="qword" value="0000000000000000"/>
+                    <value name="ShowEOFOn" type="qword" value="0000000000000001"/>
+                    <value name="ShowEOL" type="qword" value="0000000000000001"/>
+                    <value name="ShowEOLOn" type="qword" value="0000000000000001"/>
+                    <value name="ShowLineNumbersOn" type="qword" value="0000000000000000"/>
+                    <value name="ShowRightBorder" type="qword" value="0000000000000000"/>
+                    <value name="ShowRightBorderOn" type="qword" value="0000000000000000"/>
+                    <value name="ShowStackBookmarks" type="qword" value="0000000000000000"/>
+                    <value name="ShowTabSymbol" type="qword" value="0000000000000000"/>
+                    <value name="ShowTabs" type="qword" value="0000000000000000"/>
+                    <value name="ShowTabsOn" type="qword" value="0000000000000000"/>
+                    <value name="TabSymbol" type="qword" value="00000000000025CB"/>
+                </key>
+            </hierarchicalconfig>
+        </plugin>
         <plugin guid="ADAC3050-56E8-45FE-9CB1-A737623CC4A6">
             <hierarchicalconfig>
                 <key name="ADAC3050-56E8-45FE-9CB1-A737623CC4A6" description="FileCase"/>
