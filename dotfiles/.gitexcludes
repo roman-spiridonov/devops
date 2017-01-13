@@ -1,6 +1,7 @@
 # IDE files #
 #############
-**/.idea/
+**/.idea/workspace.xml
+**/.idea/tasks.xml
 
 # Package managers #
 ####################
