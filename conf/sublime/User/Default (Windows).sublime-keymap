@@ -1,16 +1,40 @@
 [
-	{ "keys": ["ctrl+alt+left"], "command": "jump_back" },
-	{ "keys": ["ctrl+alt+right"], "command": "jump_forward" },
+	{ "keys": ["alt+left"], "command": "jump_back" },
+	{ "keys": ["alt+right"], "command": "jump_forward" },
 	{ "keys": ["ctrl+shift+alt+h"], "command": "open_current_folder_as_project"},
 	{ "keys": ["ctrl+shift+alt+l"], "command": "remove_folder_from_project"},
 	{ "keys": ["ctrl+shift+i"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
 	{ "keys": ["ctrl+d"], "command": "duplicate_line" },
-	{ "keys": ["alt+j"], "command": "find_under_expand" },
 	{ "keys": ["alt+shift+up"], "command": "swap_line_up" },
 	{ "keys": ["alt+shift+down"], "command": "swap_line_down" },
 	{ "keys": ["shift+shift"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
 	{ "keys": ["ctrl+-"], "command": "fold" },
 	{ "keys": ["ctrl++"], "command": "unfold" },
 	{ "keys": ["ctrl+="], "command": "unfold" },
-	{ "keys": ["ctrl+alt+l"], "command": "run_macro_file", "args": {"file": "Packages/User/reindent.sublime-macro"} },
+	{ "keys": ["ctrl+shift+-"], "command": "fold_all" },
+	{ "keys": ["ctrl+shift+="], "command": "unfold_all" },
+	{ "keys": ["ctrl+alt+l"], "command": "reindent", "args": {"single_line": false} },
+	{ "keys": ["ctrl+shift+alt+n"], "command": "goto_symbol_in_project" },
+	{ "keys": ["ctrl+r"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
+	{ "keys": ["ctrl+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+	{ "keys": ["ctrl+;"], "command": "show_overlay", "args": {"overlay": "goto", "text": "#"} },
+	{ "keys": ["shift+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"} },
+	{ "keys": ["ctrl+alt+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"} },
+	{ "keys": ["ctrl+l"], "command": "find_next" },
+	{ "keys": ["ctrl+shift+l"], "command": "find_prev" },
+	{ "keys": ["ctrl+w"], "command": "expand_selection", "args": {"to": "scope"} },
+	{ "keys": ["alt+j"], "command": "find_under_expand" },
+	{ "keys": ["ctrl+alt+shift+j"], "command": "find_all_under" },
+	{ "keys": ["shift+f10"], "command": "build" },
+	{ "keys": ["alt+shift+f10"], "command": "build", "args": {"select": true} },
+	// Replace panel key bindings
+	{ "keys": ["enter"], "command": "replace_next", "context":
+		[{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["ctrl+shift+alt+enter"], "command": "replace_all", "args": {"close_panel": true},
+		 "context": [{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["ctrl+shift+w"], "command": "pass" },
+
+
 ]
