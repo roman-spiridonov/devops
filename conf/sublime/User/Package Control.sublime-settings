@@ -5,11 +5,15 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
 		"Add Folder To Project",
 		"AutoFileName",
 		"Babel",
+		"Boxy Theme",
+		"Boxy Theme Addon - Font Face",
 		"Color Highlighter",
-		"Dracula Color Scheme",
+		"Colorsublime",
+		"CSS Colors",
 		"Emmet",
 		"Folder2Project",
 		"HTML-CSS-JS Prettify",
@@ -17,7 +21,6 @@
 		"Nodejs",
 		"Package Control",
 		"PackageResourceViewer",
-		"SublimeCodeIntel",
-		"Terminal"
+		"SublimeCodeIntel"
 	]
 }

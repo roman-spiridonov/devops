@@ -56,7 +56,7 @@
        "panel" - Uses the output panel for tooltips.
        "status" - Uses the status bar for tooltips (was the default).
     */
-    "codeintel_tooltips": "panel",
+    "codeintel_tooltips": "popup",
 
 
     /*

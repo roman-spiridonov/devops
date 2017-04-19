@@ -4,4 +4,13 @@
 	{ "keys": ["ctrl+shift+alt+h"], "command": "open_current_folder_as_project"},
 	{ "keys": ["ctrl+shift+alt+l"], "command": "remove_folder_from_project"},
 	{ "keys": ["ctrl+shift+i"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+	{ "keys": ["ctrl+d"], "command": "duplicate_line" },
+	{ "keys": ["alt+j"], "command": "find_under_expand" },
+	{ "keys": ["alt+shift+up"], "command": "swap_line_up" },
+	{ "keys": ["alt+shift+down"], "command": "swap_line_down" },
+	{ "keys": ["shift+shift"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+	{ "keys": ["ctrl+-"], "command": "fold" },
+	{ "keys": ["ctrl++"], "command": "unfold" },
+	{ "keys": ["ctrl+="], "command": "unfold" },
+	{ "keys": ["ctrl+alt+l"], "command": "run_macro_file", "args": {"file": "Packages/User/reindent.sublime-macro"} },
 ]
