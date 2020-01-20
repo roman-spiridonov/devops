@@ -27,6 +27,13 @@
 [[ "$-" != *i* ]] && return
 
 # Shell Options
+
+# Ignore CRLF files for Cygwin
+if [[ "${OSTYPE}" == 'cygwin' ]]; then
+    set -o igncr
+    export SHELLOPTS
+fi
+
 #
 # See man bash for more options...
 #
