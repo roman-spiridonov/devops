@@ -81,3 +81,7 @@ eval "$('/cygdrive/c/anaconda3/Scripts/conda.exe' 'shell.bash' 'hook')"
 # <<< conda initialize <<<
 # need to change default prompt after conda's operation
 export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h\[\e[33m\]\w\[\e[0m\]\n\$ "
+
+if [ ! -z "${PYTHON_ENV}" ]; then
+	conda activate $PYTHON_ENV
+fi

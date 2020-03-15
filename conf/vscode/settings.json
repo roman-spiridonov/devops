@@ -1,0 +1,24 @@
+{
+    "files.autoGuessEncoding": true,
+    "editor.formatOnPaste": true,
+    "emmet.triggerExpansionOnTab": true,
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "team.showWelcomeMessage": false,
+    "window.zoomLevel": 0,
+    "python.terminal.activateEnvironment": false,
+    // "git.path": "C:\\UTIL\\wslgit.exe",
+    // start bash, not the mintty, or you'll get a new window
+    "terminal.integrated.automationShell.windows": "c:\\Users\\Spiridonov\\.vscode\\cmd.bat",
+    "terminal.integrated.shell.windows": "C:\\cygwin64\\bin\\bash.exe",
+    // "terminal.integrated.shell.windows": "C:\\cygwin64\\cygwin.bat",
+    "terminal.integrated.env.windows": {
+        "CHERE_INVOKING": "1", // Use this to keep bash from doing a 'cd ${HOME}'
+        "PYTHON_ENV": "py38"
+    },
+    // Make it a login shell
+    "terminal.integrated.shellArgs.windows": [
+        "--login",
+        "-i"
+    ]
+}
