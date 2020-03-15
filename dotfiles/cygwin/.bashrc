@@ -23,17 +23,16 @@
 
 # User dependent .bashrc file
 
-# If not running interactively, don't do anything
-[[ "$-" != *i* ]] && return
-
-# Shell Options
-
-# Ignore CRLF files for Cygwin
 if [[ "${OSTYPE}" == 'cygwin' ]]; then
     set -o igncr
     export SHELLOPTS
 fi
 
+
+# If not running interactively, don't do anything
+[[ "$-" != *i* ]] && return
+
+# Shell Options
 #
 # See man bash for more options...
 #
@@ -131,6 +130,10 @@ alias clear='printf "\033c"'
 # Find proper emacs init file for cygwin installation
 # See http://www.emacswiki.org/emacs/InitFile
 alias emacs='emacs -q -l ~/.emacs.d/init.el'
+
+# Clean up docker
+alias dockercl='docker container prune -f && docker image prune -f && docker volume prune -f'
+alias dockerrme='docker rm $(docker ps -a -q -f status=exited)'
 
 # Umask
 #
