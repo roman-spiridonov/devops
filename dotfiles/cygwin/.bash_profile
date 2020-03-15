@@ -54,9 +54,30 @@ export PATH=/usr/local/sbin:$PATH
 export PATH="$HOME/bin:$PATH"
 
 # Launch SSH Agent
-SSHAGENT=/usr/bin/ssh-agent
-SSHAGENTARGS="-s"
-if [ -z "$SSH_AUTH_SOCK" -a -x "$SSHAGENT" ]; then
-    eval `$SSHAGENT $SSHAGENTARGS`
-    trap "kill $SSH_AGENT_PID" 0
-    fi
+#SSHAGENT=/usr/bin/ssh-agent
+#SSHAGENTARGS="-s"
+#if [ -z "$SSH_AUTH_SOCK" -a -x "$SSHAGENT" ]; then
+#    eval `$SSHAGENT $SSHAGENTARGS`
+#    trap "kill $SSH_AGENT_PID" 0
+#fi
+
+# http://rabexc.org/posts/pitfalls-of-ssh-agents
+ssh-add -l &>/dev/null
+if [ "$?" == 2 ]; then
+  test -r ~/.ssh-agent && \
+    eval "$(<~/.ssh-agent)"
+
+  ssh-add -l &>/dev/null
+  if [ "$?" == 2 ]; then
+    (umask 066; ssh-agent > ~/.ssh-agent)
+    eval "$(<~/.ssh-agent)"
+    ssh-add
+  fi
+fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval "$('/cygdrive/c/anaconda3/Scripts/conda.exe' 'shell.bash' 'hook')"
+# <<< conda initialize <<<
+# need to change default prompt after conda's operation
+export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h\[\e[33m\]\w\[\e[0m\]\n\$ "
